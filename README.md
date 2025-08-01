@@ -29,8 +29,6 @@
 
 ## ⚙️ 系统功能流程
 mermaid
-复制
-编辑
 
 flowchart LR
     A[RTSP 视频流] -->|读取帧| B[YOLOv8 检测与跟踪]
@@ -44,8 +42,6 @@ flowchart LR
 📦 环境依赖
 
 bash
-复制
-编辑
 
 # 1️⃣ 创建虚拟环境
 conda create -n yolosam python=3.10 -y
@@ -71,10 +67,6 @@ pip install git+https://github.com/ChaoningZhang/MobileSAM.git
 
 bash
 
-复制
-
-编辑
-
 git clone https://github.com/yourusername/YOLOv8-MobileSAM-Pose-RTSP.git
 
 cd YOLOv8-MobileSAM-Pose-RTSP
@@ -85,10 +77,6 @@ YOLOv8 模型（目标检测 & 姿态识别）：
 
 bash
 
-复制
-
-编辑
-
 # 例：下载官方预训练模型
 
 wget https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt
@@ -98,17 +86,13 @@ wget https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n-pose
 MobileSAM 模型：
 
 bash
-复制
-编辑
+
 wget https://github.com/ChaoningZhang/MobileSAM/releases/download/model/mobile_sam.pt
 将模型放置在 weights/ 目录。
 
 3️⃣ 运行示例
 bash
 
-复制
-
-编辑
 
 python app.py \
     --rtsp "rtsp://username:password@192.168.1.100:554/stream" \
